@@ -1,6 +1,6 @@
 var state =0;
 var time = 0;
-var timerLabel = document.getElementById('timerLabel');
+var timerLabel = document.querySelector('#timerLabel');
 
 function start() {
     state=1;
@@ -14,7 +14,7 @@ function stop() {
 function reset() {
     state=0;
     time=0;
-    timerLabel.innerHTML = '00:00:00';
+    timerLabel.innerText = '00:00:00';
 }
 
 function timer() {
@@ -28,7 +28,7 @@ function timer() {
             if(min<10) min = "0" + min;
             if(sec<10) sec = "0" + sec;
             if(mSec<10) mSec = "0" + mSec;
-            timerLabel.innerHTML = min + ":" + sec + ":" + mSec;
+            timerLabel.innerText = min + ":" + sec + ":" + mSec;
             timer();
         }, 10);
     }
