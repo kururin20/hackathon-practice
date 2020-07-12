@@ -18,7 +18,7 @@
     var timerLabel = document.getElementById('timerLabel');
 
     // STARTボタン
-	function start(){
+	const start = () =>{
         // 動作中にする
         status = 1;
 
@@ -26,13 +26,13 @@
     }
 
     // STOPボタン
-    function stop(){
+    const stop = () => {
         // 停止中にする
         status = 0;
     }
 
     // RESETボタン
-    function reset(){
+    const reset = () => {
         // 停止中にする
         status = 0;
         // タイムを0に戻す
@@ -41,7 +41,7 @@
         timerLabel.innerHTML = '00:00:00';
     }
 
-    function timer(){
+    const timer = () => {
         // ステータスが動作中の場合のみ実行
         if (status == 1) {
             setTimeout(function() {
